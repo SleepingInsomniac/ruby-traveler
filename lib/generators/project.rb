@@ -18,6 +18,7 @@ module Traveler
       template "Rakefile.erb", "#{@name}/Rakefile"
       template "Gemfile.erb", "#{@name}/Gemfile"
       template "wrapper.sh.erb", "#{@name}/packaging/wrapper.sh"
+      template "bundler-config.erb", "#{@name}/packaging/bundler-config"
       chmod "#{@name}/packaging/wrapper.sh", "+x"
     end
     
