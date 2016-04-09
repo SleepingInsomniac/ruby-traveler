@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/traveler'
+require_relative '../lib/generators/project'
+
+module Traveler
+  require 'thor'
+  
+  class Cli < Thor
+    
+    desc "version", "Show version info"
+    def version
+      puts "Traveler - #{Traveler::VERSION}"
+    end
+    
+    register(Project, 'new', 'new NAME', 'Generate a new traveling ruby project.')
+    tasks["new"].options = Project.class_options
+    
+  private
+    
+    def self.source_root
+      File.expand_path File.join(File.dirname(__FILE__), "../lib/templates/")
+    end
+    
+  end
+end
+
+Traveler::Cli.start(ARGV)
