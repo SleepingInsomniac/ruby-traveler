@@ -1,4 +1,4 @@
-module Traveler
+module RubyTraveler
   require 'thor'
   
   class Project < Thor::Group

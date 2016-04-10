@@ -1,16 +1,16 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/traveler'
+require_relative '../lib/ruby-traveler'
 require_relative '../lib/generators/project'
 
-module Traveler
+module RubyTraveler
   require 'thor'
   
   class Cli < Thor
     
     desc "version", "Show version info"
     def version
-      puts "Traveler - #{Traveler::VERSION}"
+      puts "RubyTraveler - #{RubyTraveler::VERSION}"
     end
     
     register(Project, 'new', 'new NAME', 'Generate a new traveling ruby project.')
@@ -25,4 +25,4 @@ module Traveler
   end
 end
 
-Traveler::Cli.start(ARGV)
+RubyTraveler::Cli.start(ARGV)

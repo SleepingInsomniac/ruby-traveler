@@ -73,6 +73,6 @@ def create_package(target)
 end
 
 def download_runtime(target)
-  sh "cd packaging && curl -L -O --fail " +
-    "https://d6r77u77i8pq3.cloudfront.net/releases/traveling-ruby-#{TRAVELING_RUBY_VERSION}-#{target}.tar.gz"
+  url = "https://d6r77u77i8pq3.cloudfront.net/releases"
+  sh "cd packaging && curl -L -O --fail #{url}/traveling-ruby-#{TRAVELING_RUBY_VERSION}-#{target}.tar.gz"
 end

@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'traveler/version'
+require 'ruby-traveler/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "traveler"
-  spec.version       = Traveler::VERSION
+  spec.name          = "ruby-traveler"
+  spec.version       = RubyTraveler::VERSION
   spec.authors       = ["Alex Clink"]
   spec.email         = ["code@alexclink.com"]
 
@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
 
   spec.files         = Dir["bin/*"].concat(Dir["lib/**/*"])
   spec.executables   = [
-    "traveler"
+    "travel"
   ]
   spec.require_paths = [
     'lib'
