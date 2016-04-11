@@ -14,6 +14,7 @@ module RubyTraveler
     
     def structure
       empty_directory "#{@name}/packaging"
+      create_file "#{@name}/.ruby-version", "2.1.8"
       template "app.rb.erb", "#{@name}/lib/app/app.rb"
       template "Rakefile.erb", "#{@name}/Rakefile"
       template "Gemfile.erb", "#{@name}/Gemfile"

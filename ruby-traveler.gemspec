@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Traveling ruby project generator"
   spec.description   = "Generates the scaffolding for a new traveling ruby project"
-  # spec.homepage      = ""
+  spec.homepage      = "https://github.com/SleepingInsomniac/ruby-traveler"
   spec.license       = "MIT"
 
   spec.files         = Dir["bin/*"].concat(Dir["lib/**/*"])
